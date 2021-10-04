@@ -11,7 +11,7 @@ namespace DAL
             {
                 Initializer initializer = new Initializer();
 
-                initializer.Seed(this);
+                initializer.Seed(this); 
             }
         }
     }
