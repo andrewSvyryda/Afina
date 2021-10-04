@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DAL.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace DAL
 {
@@ -14,5 +15,7 @@ namespace DAL
                 initializer.Seed(this); 
             }
         }
+
+        public virtual DbSet<Course> Courses { get; set; }
     }
 }
