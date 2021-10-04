@@ -16,5 +16,11 @@ namespace DAL.Entities
 
         [Required]
         public string Description { get; set; }
+
+        public virtual ICollection<Student> Students { get; set; }
+
+        public int TeacherId { get; set; }
+
+        public virtual Teacher Teacher { get; set; }
     }
 }
