@@ -1,7 +1,7 @@
 ﻿using DAL.Entities;
 using System.Collections.Generic;
 
-namespace DAL
+namespace DAL.Context
 {
     public class Initializer
     {
