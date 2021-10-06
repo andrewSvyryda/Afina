@@ -9,7 +9,14 @@ namespace DAL.Commands
     {
         public Student CreateStudent(StudentDTO student)
         {
-            var createdStudent = AfinaContext.Context.Students.Add(new Student { Login = student.Login, Name = student.Name, Password = student.Password, Surname = student.Surname }).Entity;
+            var createdStudent = AfinaContext.Context.Students.Add(
+                new Student
+                {
+                    Login = student.Login,
+                    Name = student.Name,
+                    Password = student.Password,
+                    Surname = student.Surname
+                }).Entity;
 
             AfinaContext.Context.SaveChanges();
 
@@ -34,7 +41,7 @@ namespace DAL.Commands
         {
             var studentToDelete = AfinaContext.Context.Students.SingleOrDefault(s => s.Id == studentId);
 
-            if(studentToDelete == null)
+            if (studentToDelete == null)
             {
                 return false;
             }

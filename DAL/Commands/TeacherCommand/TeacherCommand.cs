@@ -9,7 +9,14 @@ namespace DAL.Commands
     {
         public Teacher CreateTeacher(TeahcerDTO teahcer)
         {
-            var createdStudent = AfinaContext.Context.Teachers.Add(new Teacher { Login = teahcer.Login, Name = teahcer.Name, Password = teahcer.Password, Surname = teahcer.Surname }).Entity;
+            var createdStudent = AfinaContext.Context.Teachers.Add(
+                new Teacher
+                {
+                    Login = teahcer.Login,
+                    Name = teahcer.Name,
+                    Password = teahcer.Password,
+                    Surname = teahcer.Surname
+                }).Entity;
 
             AfinaContext.Context.SaveChanges();
 

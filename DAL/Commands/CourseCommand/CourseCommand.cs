@@ -9,12 +9,17 @@ namespace DAL.Commands
     {
         public Course CreateCourse(CourseDTO course)
         {
-            if(AfinaContext.Context.Courses.Any(c => c.Title == course.Title))
+            if (AfinaContext.Context.Courses.Any(c => c.Title == course.Title))
             {
                 return null;
             }
 
-            var createdCourse = AfinaContext.Context.Courses.Add(new Course { Title = course.Title, Description = course.Description }).Entity;
+            var createdCourse = AfinaContext.Context.Courses.Add(
+                new Course
+                {
+                    Title = course.Title,
+                    Description = course.Description
+                }).Entity;
 
             AfinaContext.Context.SaveChanges();
 
@@ -25,7 +30,7 @@ namespace DAL.Commands
         {
             Course modifiedCourse = AfinaContext.Context.Courses.SingleOrDefault(c => c.Id == courseId);
 
-            if(modifiedCourse == null)
+            if (modifiedCourse == null)
             {
                 return null;
             }
