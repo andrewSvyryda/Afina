@@ -1,38 +1,36 @@
-﻿using DAL.DTO;
+﻿using DAL.Context;
+using DAL.DTO;
 using DAL.Entities;
-using System.Collections.Generic;
 using System.Linq;
 
-namespace DAL.Commands.CourseCommand
+namespace DAL.Commands
 {
-    public class CourseCommand
+    public class CourseCommand : ICourseCommand
     {
-        public AfinaDbContext context;
-
-        public CourseCommand()
-        {
-            context = new AfinaDbContext();
-        }
-
         public Course CreateCourse(CourseDTO course)
         {
-            if(context.Courses.Any(c => c.Title == course.Title))
+            if (AfinaContext.Context.Courses.Any(c => c.Title == course.Title))
             {
                 return null;
             }
 
-            var createdCourse = context.Courses.Add(new Course { Title = course.Title, Description = course.Description }).Entity;
+            var createdCourse = AfinaContext.Context.Courses.Add(
+                new Course
+                {
+                    Title = course.Title,
+                    Description = course.Description
+                }).Entity;
 
-            context.SaveChanges();
+            AfinaContext.Context.SaveChanges();
 
             return createdCourse;
         }
 
         public Course ChangeCourse(int courseId, CourseDTO course)
         {
-            Course modifiedCourse = context.Courses.SingleOrDefault(c => c.Id == courseId);
+            Course modifiedCourse = AfinaContext.Context.Courses.SingleOrDefault(c => c.Id == courseId);
 
-            if(modifiedCourse == null)
+            if (modifiedCourse == null)
             {
                 return null;
             }
@@ -40,21 +38,21 @@ namespace DAL.Commands.CourseCommand
             modifiedCourse.Title = course.Title;
             modifiedCourse.Description = course.Description;
 
-            context.SaveChanges();
+            AfinaContext.Context.SaveChanges();
 
             return modifiedCourse;
         }
 
         public bool DeleteCourse(int courseId)
         {
-            Course courseToDelete = context.Courses.SingleOrDefault(c => c.Id == courseId);
+            Course courseToDelete = AfinaContext.Context.Courses.SingleOrDefault(c => c.Id == courseId);
 
             if (courseToDelete == null)
             {
                 return false;
             }
 
-            context.Courses.Remove(courseToDelete);
+            AfinaContext.Context.Courses.Remove(courseToDelete);
 
             return true;
         }
