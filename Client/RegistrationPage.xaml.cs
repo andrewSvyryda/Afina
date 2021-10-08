@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 namespace Client
 {
     /// <summary>
-    /// Interaction logic for LoginPage.xaml
+    /// Interaction logic for RegistrationPage.xaml
     /// </summary>
-    public partial class LoginPage : Window
+    public partial class RegistrationPage : Window
     {
-        RegistrationPage registration;
-        public LoginPage()
+        public RegistrationPage()
         {
             InitializeComponent();
-            registration = new RegistrationPage();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -31,9 +29,6 @@ namespace Client
             this.Close();
         }
 
-        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            registration.Show();
-        }
+        
     }
 }
