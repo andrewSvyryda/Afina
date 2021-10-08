@@ -70,7 +70,7 @@
                     <Label Grid.Row="7" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" 
                            FontSize="15">SURNAME</Label>
                     <TextBox x:Name="boxSurname" Grid.Row="8" Background="Transparent" BorderThickness="2"></TextBox>
-                    <Button Grid.Row="11" BorderThickness="0" Background="#73C269" FontSize="18" Click="Button_Click">REGISTRATION</Button>
+                    <Button x:Name="btnRegistration" Grid.Row="11" BorderThickness="0" Background="#73C269" FontSize="18" Click="btnRegistration_Click" >REGISTRATION</Button>
                     
                 </Grid>
 

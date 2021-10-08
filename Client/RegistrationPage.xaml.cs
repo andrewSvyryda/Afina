@@ -29,6 +29,9 @@ namespace Client
             this.Close();
         }
 
-        
+        private void btnRegistration_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

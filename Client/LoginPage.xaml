@@ -62,7 +62,7 @@
                     <TextBox x:Name="boxUsername" Grid.Row="2" Background="Transparent" BorderThickness="2"></TextBox>
                     <Label Grid.Row="3" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" FontSize="15">PASSWORD</Label>
                     <PasswordBox x:Name="passBox" Grid.Row="4" Background="Transparent" BorderThickness="2"></PasswordBox>
-                    <Button Grid.Row="6" BorderThickness="0" Background="#73C269" FontSize="18">SIGN IN</Button>
+                    <Button x:Name="btnSignIn" Grid.Row="6" BorderThickness="0" Background="#73C269" FontSize="18" Click="btnSignIn_Click">SIGN IN</Button>
                     <Label Name="lblNewAccount" Grid.Row="7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                             FontSize="15" Foreground="Aqua" MouseDown="Label_MouseDown">New account?</Label>
                 </Grid>              

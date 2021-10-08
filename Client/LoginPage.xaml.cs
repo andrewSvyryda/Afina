@@ -35,5 +35,10 @@ namespace Client
         {
             registration.Show();
         }
+
+        private void btnSignIn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
