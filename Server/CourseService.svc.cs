@@ -18,10 +18,5 @@ namespace Server
 
             return AfinaMapper.Mapper.Map<List<CourseDTO>>(courseQuery.GetCourses().ToList());
         }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

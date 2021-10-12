@@ -8,13 +8,17 @@ namespace Server
     [ServiceContract]
     public interface ICourseService
     {
+        [OperationContract]
+        List<CourseDTO> GetCourses();
 
         [OperationContract]
-        List<CourseDTO> GetCourses()
+        void CreateCourse(CourseDTO course);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        bool DeleteCourse(int courseId);
 
+        [OperationContract]
+        void ChangeCourse(int courseId, CourseDTO course);
     }
 
 
