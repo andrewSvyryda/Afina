@@ -71,8 +71,8 @@
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock x:Name="tbxTitle" Text="{Binding Title}" FontWeight="Bold" Margin="5"/>
-                                <TextBlock x:Name="tbxDiscription" Text="{Binding Discription}" FontStyle="Italic"/>                                
+                                <TextBlock Text="{Binding Title}" FontWeight="Bold" Margin="5"/>
+                                <TextBlock Text="{Binding Discription}" FontStyle="Italic"/>                                
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
