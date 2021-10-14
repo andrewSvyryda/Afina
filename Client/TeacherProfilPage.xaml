@@ -50,9 +50,9 @@
             <Label Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center" Grid.ColumnSpan="2"
                 HorizontalContentAlignment="Center" FontSize="30" FontWeight="DemiBold"
                Margin="100,10,0,0">TRAINING   PLATFORM   AFINA</Label>
-            <Button DockPanel.Dock="Right" Width="30" Height="30" Margin="0,5,5,5" 
+            <Button x:Name="btnClose" DockPanel.Dock="Right" Width="30" Height="30" Margin="0,5,5,5" 
                             HorizontalAlignment="Center" VerticalAlignment="Center" 
-                            BorderBrush="Transparent" BorderThickness="0">
+                            BorderBrush="Transparent" BorderThickness="0" Click="btnClose_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="Image/pngwing.com.png" />
                 </Button.Background>
@@ -65,8 +65,8 @@
                 VerticalContentAlignment="Center" FontSize="20">MY SUBSCRIPTIONS</Label>
         <Label Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center" FontSize="20">MY COURSES</Label>-->
-        <ListBox x:Name="listSubscriptions" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,5,10,5" 
-                  Background="Transparent">
+        <ListBox x:Name="listSubscriptions" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" 
+                 Margin="10,5,50,5" Background="Transparent">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
