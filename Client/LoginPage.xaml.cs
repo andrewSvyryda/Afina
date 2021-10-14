@@ -10,27 +10,35 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Client
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoginPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginPage : Window
     {
-        public MainWindow()
+        RegistrationPage registration;
+        public LoginPage()
         {
             InitializeComponent();
-            page = new LoginPage();
-            page.Show();
-            this.Close();
+            registration = new RegistrationPage();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            registration.Show();
+        }
+
+        private void btnSignIn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
