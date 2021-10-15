@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "..\..\DTO\DTO.csproj", "{6E23202D-AB1C-4965-BA4A-C1C0E1C16E19}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL2", "..\..\DAL\DAL2.csproj", "{44438F0B-805A-48F7-A552-01163A6E892C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\..\DAL1\DAL.csproj", "{FBF63C52-4222-4C8C-9DE4-529EF5F94A9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{6E23202D-AB1C-4965-BA4A-C1C0E1C16E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E23202D-AB1C-4965-BA4A-C1C0E1C16E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E23202D-AB1C-4965-BA4A-C1C0E1C16E19}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44438F0B-805A-48F7-A552-01163A6E892C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44438F0B-805A-48F7-A552-01163A6E892C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44438F0B-805A-48F7-A552-01163A6E892C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44438F0B-805A-48F7-A552-01163A6E892C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBF63C52-4222-4C8C-9DE4-529EF5F94A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF63C52-4222-4C8C-9DE4-529EF5F94A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF63C52-4222-4C8C-9DE4-529EF5F94A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF63C52-4222-4C8C-9DE4-529EF5F94A9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
