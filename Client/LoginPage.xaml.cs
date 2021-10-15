@@ -22,20 +22,17 @@ namespace Client
     public partial class LoginPage : Window
     {
         RegistrationPage registration;
-        TeacherProfilPage profilPage;
         public LoginPage()
         {
             if (System.Net.ServicePointManager.SecurityProtocol == (SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls))
                 System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
             InitializeComponent();
             registration = new RegistrationPage();
-            profilPage = new TeacherProfilPage();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            profilPage.Show();
         }
 
         private void Label_MouseDown(object sender, MouseButtonEventArgs e)

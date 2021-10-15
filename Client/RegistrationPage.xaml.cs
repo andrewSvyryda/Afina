@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.AuthenticateReference;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,23 @@ namespace Client
 
         private void btnRegistration_Click(object sender, RoutedEventArgs e)
         {
+            AuthenticateServiceClient client = new AuthenticateServiceClient();
 
+            var response = client.Register(new RegisterDTO
+            {
+                IsTeacher = teacherRadioButton.IsChecked.Value,
+                Login = boxLogin.Text,
+                Name = boxName.Text,
+                Password = passBox.Password,
+                Surname = boxSurname.Text
+            });
+
+            if(!response)
+            {
+                MessageBox.Show("Something went wrong");
+            }
+
+            this.Close();
         }
     }
 }

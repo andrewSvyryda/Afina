@@ -23,9 +23,6 @@ namespace Client
         public MainWindow()
         {
             InitializeComponent();
-            LoginPage page = new LoginPage();
-            page.Show();
-            this.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
