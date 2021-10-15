@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="RegistrationPage" Height="450" Width="800"
+        Title="RegistrationPage" Height="550" Width="800"
          WindowStyle =" None"
         AllowsTransparency =" true"
         Background ="Transparent"
@@ -58,6 +58,7 @@
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20">NEW ACCOUNT</Label>
                     <Label Grid.Row="1" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" FontSize="15">LOGIN</Label>
@@ -70,6 +71,12 @@
                     <Label Grid.Row="7" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" 
                            FontSize="15">SURNAME</Label>
                     <TextBox x:Name="boxSurname" Grid.Row="8" Background="Transparent" BorderThickness="2"></TextBox>
+                    <StackPanel Grid.Row="9" Orientation="Horizontal" VerticalAlignment="Center" >
+                        <Label Margin="10,5,10,5" FontSize="15">teacher</Label>
+                        <RadioButton VerticalAlignment="Center" Margin="20,5,20,5" />
+                        <Label Margin="10,5,10,5" FontSize="15">student</Label>
+                        <RadioButton VerticalAlignment="Center" Margin="20,5,20,5"/>
+                    </StackPanel>
                     <Button x:Name="btnRegistration" Grid.Row="11" BorderThickness="0" Background="#73C269" FontSize="18" Click="btnRegistration_Click" >REGISTRATION</Button>
                     
                 </Grid>
