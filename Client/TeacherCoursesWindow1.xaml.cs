@@ -23,5 +23,11 @@ namespace Client
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+            this.Close();
+        }
     }
 }
