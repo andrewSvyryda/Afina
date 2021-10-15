@@ -14,6 +14,10 @@ namespace Server
                     cfg.CreateMap<TeahcerDTO, Teacher>();
                     cfg.CreateMap<Teacher, TeahcerDTO>();
                     cfg.CreateMap<Course, CourseDTO>();
+                    cfg.CreateMap<TeahcerDTO, RegisterDTO>();
+                    cfg.CreateMap<RegisterDTO, TeahcerDTO>();
+                    cfg.CreateMap<RegisterDTO, StudentDTO>();
+                    cfg.CreateMap<StudentDTO, RegisterDTO>();
                 }
             )
         );
