@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace Client
 {
     /// <summary>
-    /// Interaction logic for TeacherProfilPage.xaml
+    /// Interaction logic for Student_profil_page.xaml
     /// </summary>
-    public partial class TeacherProfilPage : Window
+    public partial class Student_profil_page : Window
     {
-        public TeacherProfilPage()
+        public Student_profil_page()
         {
             InitializeComponent();
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }
