@@ -56,6 +56,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Student_profil_page.xaml.cs">
+      <DependentUpon>Student_profil_page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TeacherCoursesWindow1.xaml.cs">
       <DependentUpon>TeacherCoursesWindow1.xaml</DependentUpon>
     </Compile>
@@ -93,6 +96,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RegistrationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student_profil_page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,6 +147,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\athens-ancient-greece.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
