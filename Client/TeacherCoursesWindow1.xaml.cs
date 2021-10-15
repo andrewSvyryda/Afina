@@ -10,27 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Client
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for TeacherCoursesWindow1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TeacherCoursesWindow1 : Window
     {
-        TeacherCoursesWindow1 teacherPage;
-        public MainWindow()
+        public TeacherCoursesWindow1()
         {
             InitializeComponent();
-            page = new LoginPage();
-            page.Show();
-            this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
+            System.Windows.Application.Current.Shutdown();
             this.Close();
         }
     }
