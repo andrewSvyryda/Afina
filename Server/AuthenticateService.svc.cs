@@ -14,7 +14,7 @@ namespace Server
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IAuthenticateService
     {
-        public bool Login(LogInDTO data)
+        public int Login(LogInDTO data)
         {
             StudentQuery studentQuery = new StudentQuery();
 
@@ -22,14 +22,14 @@ namespace Server
 
             if(student != null)
             {
-                return student.Password == data.Password;
+                return student.Password == data.Password ? 1 : 0;
             }
 
             TeacherQuery teacherQuery = new TeacherQuery();
 
             var teacher = teacherQuery.GetTeacherByLogin(data.Login);
 
-            return teacher != null && teacher.Password == data.Password;
+            return teacher != null && teacher.Password == data.Password ? 2 : 0;
         }
 
         public bool Register(RegisterDTO data)

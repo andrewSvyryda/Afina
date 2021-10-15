@@ -24,8 +24,6 @@ namespace Client
         RegistrationPage registration;
         public LoginPage()
         {
-            if (System.Net.ServicePointManager.SecurityProtocol == (SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls))
-                System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
             InitializeComponent();
             registration = new RegistrationPage();
         }
@@ -44,17 +42,23 @@ namespace Client
         {
             AuthenticateServiceClient client = new AuthenticateServiceClient();
 
-            var response = client.Login(new LogInDTO { Login = boxUsername.Text, Password = passBox.Password });
+            int response = client.Login(new LogInDTO { Login = boxUsername.Text, Password = passBox.Password });
 
-            if(response)
+            if(response == 0)
             {
-                MainWindow window = new MainWindow();
+                MessageBox.Show("Incorrect password or login");
+            }
+            else if(response == 1)
+            {
+                Student_profil_page window = new Student_profil_page();
                 window.Show();
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Incorrect password or login");
+                TeacherCoursesWindow1 window = new TeacherCoursesWindow1(boxUsername.Text);
+                window.Show();
+                this.Close();
             }
         }
     }

@@ -204,10 +204,10 @@ namespace Client.AuthenticateReference {
     public interface IAuthenticateService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticateService/Login", ReplyAction="http://tempuri.org/IAuthenticateService/LoginResponse")]
-        bool Login(Client.AuthenticateReference.LogInDTO data);
+        int Login(Client.AuthenticateReference.LogInDTO data);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticateService/Login", ReplyAction="http://tempuri.org/IAuthenticateService/LoginResponse")]
-        System.Threading.Tasks.Task<bool> LoginAsync(Client.AuthenticateReference.LogInDTO data);
+        System.Threading.Tasks.Task<int> LoginAsync(Client.AuthenticateReference.LogInDTO data);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticateService/Register", ReplyAction="http://tempuri.org/IAuthenticateService/RegisterResponse")]
         bool Register(Client.AuthenticateReference.RegisterDTO data);
@@ -243,11 +243,11 @@ namespace Client.AuthenticateReference {
                 base(binding, remoteAddress) {
         }
         
-        public bool Login(Client.AuthenticateReference.LogInDTO data) {
+        public int Login(Client.AuthenticateReference.LogInDTO data) {
             return base.Channel.Login(data);
         }
         
-        public System.Threading.Tasks.Task<bool> LoginAsync(Client.AuthenticateReference.LogInDTO data) {
+        public System.Threading.Tasks.Task<int> LoginAsync(Client.AuthenticateReference.LogInDTO data) {
             return base.Channel.LoginAsync(data);
         }
         

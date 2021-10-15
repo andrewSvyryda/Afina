@@ -4,12 +4,11 @@ using DTO;
 namespace Server
 {
     
-    
     [ServiceContract]
     public interface IAuthenticateService
     {
         [OperationContract]
-        bool Login(LogInDTO data);
+        int Login(LogInDTO data);
 
         [OperationContract]
         bool Register(RegisterDTO data);

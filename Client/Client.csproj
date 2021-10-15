@@ -66,6 +66,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\CourseServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\UserService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Student_profil_page.xaml.cs">
       <DependentUpon>Student_profil_page.xaml</DependentUpon>
     </Compile>
@@ -142,6 +152,35 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AuthenticateReference\Service1.wsdl" />
+    <None Include="Connected Services\CourseServiceReference\Client.CourseServiceReference.CourseDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CourseServiceReference\CourseService.wsdl" />
+    <None Include="Connected Services\CourseServiceReference\CourseService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CourseServiceReference\CourseService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CourseServiceReference\CourseService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\Client.UserService.StudentDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserService\Client.UserService.TeahcerDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserService\UserService.wsdl" />
+    <None Include="Connected Services\UserService\UserService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\UserService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\UserService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -173,6 +212,8 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AuthenticateReference\" />
+    <WCFMetadataStorage Include="Connected Services\CourseServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\UserService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\AuthenticateReference\AuthenticateService.disco" />
@@ -189,6 +230,36 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Resource Include="Images\athens-ancient-greece.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserService\UserService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CourseServiceReference\CourseService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CourseServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CourseServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CourseServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -36,7 +36,7 @@ namespace Client
 
             var response = client.Register(new RegisterDTO
             {
-                IsTeacher = teacherRadioButton.IsChecked.Value,
+                IsTeacher = !teacherRadioButton.IsChecked.Value,
                 Login = boxLogin.Text,
                 Name = boxName.Text,
                 Password = passBox.Password,

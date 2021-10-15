@@ -1,18 +1,12 @@
 ﻿using DAL.Commands;
 using DAL.Queries;
 using DTO;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
 
 namespace Server
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "CourseService" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select CourseService.svc or CourseService.svc.cs at the Solution Explorer and start debugging.
-    public class CourseService : ICourseService
+    public class CourseService1 : ICourseService1
     {
         public void ChangeCourse(int courseId, CourseDTO course)
         {
