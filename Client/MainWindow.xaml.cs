@@ -20,7 +20,6 @@ namespace Client
     /// </summary>
     public partial class MainWindow : Window
     {
-        TeacherCoursesWindow1 teacherPage;
         public MainWindow()
         {
             InitializeComponent();
