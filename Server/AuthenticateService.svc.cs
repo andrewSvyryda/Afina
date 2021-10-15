@@ -29,7 +29,7 @@ namespace Server
 
             var teacher = teacherQuery.GetTeacherByLogin(data.Login);
 
-            return teacher.Password == data.Password;
+            return teacher != null && teacher.Password == data.Password;
         }
 
         public bool Register(RegisterDTO data)
