@@ -104,7 +104,11 @@
                      Background="Transparent" Grid.RowSpan="2"></TextBox>
             <Label Grid.Row="5" VerticalContentAlignment="Center" FontSize="20" Height="40">Attachments</Label>
             <ListBox x:Name="listboxAttach" Grid.Row="6" Grid.RowSpan="2" Background="Transparent">
-
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
             <Label Grid.Row="8" VerticalContentAlignment="Center" FontSize="20" Height="40">New Attachment</Label>
             <TextBox x:Name="boxRefAttach" Grid.Row="9" TextWrapping="Wrap" FontSize="15"
